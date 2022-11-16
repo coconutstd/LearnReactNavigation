@@ -1,6 +1,6 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
-import NestedMain from '../screens/NestedMain'
+import NestedMain from '../../../../screens/Home/NestedMain'
 
 const Stack = createStackNavigator()
 

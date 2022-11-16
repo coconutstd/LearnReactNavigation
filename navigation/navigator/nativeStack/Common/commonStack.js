@@ -1,7 +1,7 @@
 import React from 'react'
-
-import Modal from '../screens/common/Modal'
 import { createStackNavigator } from '@react-navigation/stack';
+
+import Modal from '../../../../screens/common/Modal'
 
 const Stack = createStackNavigator()
 
@@ -13,5 +13,5 @@ function CommonStack() {
   )
 }
 
-export default  CommonStack
+export default CommonStack
 

@@ -1,12 +1,10 @@
+import { Button, View } from 'react-native'
 import React from 'react'
-import {View, Button} from 'react-native'
 
-function SearchScreen({navigation}) {
+export default function SearchMainScreen({ navigation }) {
   return (
     <View>
       <Button title="탭간 이동" onPress={() => navigation.navigate('DetailScreen')} />
     </View>
   )
 }
-
-export default SearchScreen
