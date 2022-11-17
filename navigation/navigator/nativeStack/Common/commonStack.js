@@ -7,8 +7,10 @@ const Stack = createStackNavigator()
 
 function CommonStack() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Modal" component={Modal} options={{ presentation: 'modal'}} />
+    <Stack.Navigator screenOptions={{ presentation: 'modal', headerShown: false}}>
+      <Stack.Group>
+        <Stack.Screen name="Modal" component={Modal} />
+      </Stack.Group>
     </Stack.Navigator>
   )
 }

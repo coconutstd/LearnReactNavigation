@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import HomeStack from '../nativeStack/Home/homeStack'
@@ -8,10 +8,16 @@ import MessageStack from '../nativeStack/Message/messageStack'
 
 const Tab = createBottomTabNavigator()
 
-function BottomTabNavigator() {
+function BottomTabNavigator({navigation}) {
+
+  useEffect(() => {
+    // console.log('BottomTabNavigator ', navigation.getState())
+  }, [])
+
   return (
     <Tab.Navigator
       initialRouteName="Home"
+      backBehavior="history"
       screenOptions={{
         tabBarActiveTintColor: '#fb8c00',
         tabBarShowLabel: false,

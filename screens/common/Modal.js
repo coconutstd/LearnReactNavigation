@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { View, Text, Button } from 'react-native'
 
-const Modal = ({navigation, route}) => {
+const Modal = ({navigation}) => {
 
   useEffect(() => {
-    console.log('navigation state', navigation.getState())
+    console.log('Modal', navigation.getState())
   }, [])
 
   return (
