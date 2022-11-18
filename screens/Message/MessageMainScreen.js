@@ -1,5 +1,6 @@
 import { Button, View } from 'react-native'
 import React, { useEffect } from 'react'
+import { useFocusEffect } from '@react-navigation/native'
 
 export default function MessageMainScreen({ navigation }) {
 
@@ -7,10 +8,14 @@ export default function MessageMainScreen({ navigation }) {
     console.log('MessageMainScreen rendered')
   },[])
 
+  useFocusEffect(() => {
+    console.log('TabNavigator 상태', navigation.getParent().getState())
+  })
+
   return (
     <View>
-      <Button title='나를 누르면 깊게 들어가요' onPress={() => {
-        navigation.navigate('MessageNestedStack')
+      <Button title='AlarmScreen' onPress={() => {
+        navigation.navigate('AlarmScreen')
       }}/>
     </View>
   )

@@ -4,7 +4,6 @@ import { useFocusEffect } from '@react-navigation/native'
 import { CommonActions } from '@react-navigation/native'
 
 function HomeWebviewScreen({navigation, route}) {
-
   useFocusEffect(() => {
     if (route.params?.routes !== undefined) {
       navigation.dispatch(state => {
@@ -19,7 +18,6 @@ function HomeWebviewScreen({navigation, route}) {
         })
       })
     }
-    console.log('HomeWebviewScreen focused', navigation.getState())
   })
 
   return (
@@ -28,6 +26,7 @@ function HomeWebviewScreen({navigation, route}) {
         screen: 'Modal',
         initial: false
       })} />
+      <Button title="그냥 뒤로가기" onPress={() => route.params?.globalNavigation.goBack()} />
     </View>
   )
 }

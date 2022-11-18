@@ -2,10 +2,10 @@ import { Button, View } from 'react-native'
 import React, { useEffect } from 'react'
 import { useFocusEffect } from '@react-navigation/native'
 
-export default function NotificationMainScreen({navigation}) {
+export default function AlarmScreen({ navigation }) {
 
   useEffect(() => {
-    console.log('NotificationMainScreen rendered')
+    console.log('MessageMainScreen rendered')
   },[])
 
   useFocusEffect(() => {
@@ -14,9 +14,9 @@ export default function NotificationMainScreen({navigation}) {
 
   return (
     <View>
-      <Button title="Notification Nested Screen" onPress={() => navigation.navigate('NotificationNestedStack', {
-        screen: 'NotificationNestedScreen'
-      })} />
+      <Button title='HomeScreen' onPress={() => {
+        navigation.navigate('HomeScreen')
+      }}/>
     </View>
   )
 }

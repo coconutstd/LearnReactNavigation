@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react'
 import {View, Button} from 'react-native'
-import { useNavigationState } from '@react-navigation/native'
+import { useFocusEffect, useNavigationState } from '@react-navigation/native'
 
 function HomeScreen({navigation}) {
   useEffect(() => {
     console.log('HomeScreen ', navigation.getState())
   }, [])
+
+  useFocusEffect(() => {
+    console.log('TabNavigator 상태', navigation.getParent().getState())
+  })
 
   return (
     <View>

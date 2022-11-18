@@ -15,7 +15,9 @@ function App() {
 
   return <NavigationContainer ref={navigationRef}>
     <Stack.Navigator>
-      <Stack.Screen name='MainBottomTab' component={BottomTabNavigator} options={{headerShown: false}} />
+      <Stack.Screen name='MainBottomTab' component={BottomTabNavigator} options={{headerShown: false}}
+                    // initialParams={{ globalNavigation: navigationRef }}
+      />
       <Stack.Screen name='CommonStack' component={CommonStack}/>
     </Stack.Navigator>
   </NavigationContainer>

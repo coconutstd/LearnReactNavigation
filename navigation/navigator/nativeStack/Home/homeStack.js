@@ -7,16 +7,21 @@ import HomeWebviewScreen from '../../../../screens/Home/HomeWebviewScreen'
 
 const Stack = createNativeStackNavigator()
 
-function HomeStack({ navigation }) {
+function HomeStack({ navigation, route }) {
   useEffect(() => {
-    // console.log('HomeStack ', navigation.getState())
+    console.log('HomeStack이 생성되었어요')
+    return () => {
+      console.log('HomeStack이 삭제되었어요')
+    }
   }, [])
 
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
       <Stack.Screen name="DetailScreen" component={DetailScreen} />
-      <Stack.Screen name="HomeWebviewScreen" component={HomeWebviewScreen} />
+      <Stack.Screen name="HomeWebviewScreen" component={HomeWebviewScreen}
+                    // initialParams={{ globalNavigation: route.params?.globalNavigation }}
+      />
     </Stack.Navigator>
   )
 }
